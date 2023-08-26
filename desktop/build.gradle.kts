@@ -23,7 +23,7 @@ kotlin {
 
 compose.desktop {
     application {
-        mainClass = "MovieKmp"
+        mainClass = "MainKt"
         nativeDistributions {
             targetFormats(
                 org.jetbrains.compose.desktop.application.dsl.TargetFormat.Dmg,

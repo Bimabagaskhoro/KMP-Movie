@@ -34,3 +34,4 @@ rootProject.name = "MovieKmp"
 include(":androidApp")
 include(":desktop")
 include(":shared")
+include(":web")

@@ -17,6 +17,10 @@ kotlin {
         jvmToolchain(11)
     }
 
+    js(IR) {
+        browser()
+    }
+
     cocoapods {
         summary = "Some description for the Shared Module"
         homepage = "Link to the Shared Module homepage"
@@ -36,6 +40,7 @@ kotlin {
                 implementation(compose.runtime)
                 implementation(compose.foundation)
                 implementation(compose.material)
+                implementation(compose.material3)
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
             }
@@ -47,6 +52,19 @@ kotlin {
                 api("androidx.core:core-ktx:1.10.1")
             }
         }
+
+        val desktopMain by getting {
+            dependencies {
+                // Desktop specific dependencies
+            }
+        }
+
+        val jsMain by getting {
+            dependencies {
+                // Js specific dependencies
+            }
+        }
+
         val iosX64Main by getting
         val iosArm64Main by getting
         val iosSimulatorArm64Main by getting
